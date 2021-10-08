@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <h1 :class="{darmodeText: daymode ==`黑夜模式`}">{{ meg }}</h1>
-    <h2 :class="{darmodeText: daymode ==`黑夜模式`}">This page has {{ count }} infos</h2>
-    <form @submit.prevent="insert" :class="{darmodeForm: daymode ==`黑夜模式`}">
+    <h1>{{ meg }}</h1>
+    <h2>This page has {{ count }} infos</h2>
+    <form @submit.prevent="insert">
       <input
         type="text"
         placeholder="insert your name"
@@ -15,7 +15,7 @@
         v-model="info.age"
         @change="haveValue"
       />
-      <div id="memberselect" :class="{darmodeText: daymode ==`黑夜模式`}">
+      <div id="memberselect">
         <p>select your member class:</p>
         <label for="guest">
           <input
@@ -100,6 +100,9 @@ export default {
   computed: {
     daymode () {
       return this.$store.state.daymode
+    },
+    loginstate () {
+      return this.$store.state.loginpage.logined
     }
   },
   methods: {
@@ -126,13 +129,23 @@ export default {
   }
 }
 </script>
-<style scoped>
-.darmodeText{
-  color:#fff;
-}
-.darmodeForm>input{
-  border: 1px dashed #fff;
-  color:#fff;
+<style scoped lang="less">
+.darkmode{
+ h1,h2{
+   color:#fff
+ }
+ input[type=text]{
+   background-color: inherit;
+ }
+ #memberselect{
+   color:#fff
+ }
+ .show{
+   color:#fff;
+   .showList{
+    border: 1px dashed #fff;
+   }
+ }
 }
 form {
   display: flex;
