@@ -136,6 +136,8 @@ export default {
  }
  input[type=text]{
    background-color: inherit;
+   color:#fff;
+   caret-color: #fff;
  }
  #memberselect{
    color:#fff

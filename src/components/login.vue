@@ -12,14 +12,12 @@
       </div>
       <div class="submit">
         <input type="submit" value="login" @click="test" />
-        <input type="button" value="logintest" @click="test" />
       </div>
     </form>
     <div v-else class="else">
       <h1>logined page</h1>
       <h5>welcome!{{ welcome }}</h5>
       <input type="submit" value="logout" @click="logout" />
-      <input type="button" value="logintest" @click="test" />
     </div>
   </div>
 </template>
@@ -52,6 +50,7 @@ export default {
       this.$store.commit('logout')
     },
     test () {
+      //  <input type="button" value="logintest" @click="test" />
       console.log(this.$store.state.loginpage.logined)
       console.log(this.$store.state.loginpage.loginName)
     }
@@ -75,6 +74,8 @@ export default {
   input[type="text"],
   input[type="password"] {
     background-color: inherit;
+    color:#fff;
+    caret-color: #fff;
   }
   .else{
     color: #fff;

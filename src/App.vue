@@ -27,12 +27,12 @@ export default {
   data () {
     return {
       list: [
-        { id: 0, name: '主页 ^~~^ 欢迎欢迎', router: '/' },
+        { id: 0, name: '主页 ^~~^ 轮播图', router: '/' },
         { id: 1, name: '浅拷贝 ^~~^ 录入信息', router: '/vuetext' },
         { id: 2, name: '节流 ^~~^ 控制条', router: '/kongzhitiao' },
         { id: 3, name: '人员 ^~~^ fetch', router: '/member' },
-        { id: 4, name: '守卫 ^~~^ login', router: '/login' }
-
+        { id: 4, name: '守卫 ^~~^ login', router: '/login' },
+        { id: 5, name: 'fall ^~~^ 瀑布流', router: '/pubu' }
       ]
     }
   }

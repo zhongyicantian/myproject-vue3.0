@@ -8,6 +8,9 @@ export default createStore({
       loginName: '',
       password: '',
       logined: false
+    },
+    lunbo: {
+      imgIndex: ''
     }
   },
   mutations: {
@@ -21,6 +24,9 @@ export default createStore({
         state.daymode = '黑夜模式'
         bodymode.classList.toggle('darkmode')
       }
+    },
+    select (state, payload) {
+      state.currentIndex = payload.index
     },
     cleargard (state, payload) {
       state.loginpage.loginName = payload.lname

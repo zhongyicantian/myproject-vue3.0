@@ -33,14 +33,14 @@
 </template>
 
 <script>
-import a2 from './static/json/data.json'
+import a2 from './json/data.json'
 export default {
   name: 'member',
   mounted () {
     console.log(a2)
     this.datalist = a2.infos
     const b = () => {
-      fetch('https://sdfsdf.dev/10s,')
+      fetch('https://sdfsdf.dev/20s,')
         .then((response) => response.json())
         .then((b1) => {
           //  console.log(b1.data)

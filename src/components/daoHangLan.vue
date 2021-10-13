@@ -74,17 +74,19 @@ export default {
   props: ['list'],
   data () {
     return {
-      currentIndex: 0
     }
   },
   computed: {
     daymode () {
       return this.$store.state.daymode
+    },
+    currentIndex () {
+      return this.$store.state.currentIndex
     }
   },
   methods: {
     select1 (index) {
-      this.currentIndex = index
+      this.$store.commit('select', { index: index })
     },
     changeFun () {
       this.$store.commit('change')
